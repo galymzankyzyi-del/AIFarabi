@@ -1,0 +1,1065 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1D0225">
+  <meta name="description" content="AIFarabi — жасанды интеллект негізінде оқу материалдарынан қазақ тіліндегі бейнесабақтарды автоматты генерациялау архитектурасы.">
+
+  <title>AIFarabi — Ғылыми жоба</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <div id="globalCursorGlow" class="global-cursor-glow" aria-hidden="true"></div>
+
+  <!-- ПРОГРЕСС ПРОКРУТКИ -->
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- НАВИГАЦИЯ -->
+  <header class="site-header" id="siteHeader">
+
+    <a class="brand" href="#home" aria-label="AIFarabi, басына өту">
+      <span class="brand-glyph">
+        A<span>✳</span>
+      </span>
+
+      <span>
+        AI<span class="brand-highlight">Farabi</span>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Негізгі навигация">
+      <a href="#problem">Мәселе</a>
+      <a href="#goal">Мақсат</a>
+      <a href="#process">Жүйе</a>
+      <a href="#technology">Технология</a>
+      <a href="#demo">Мысал</a>
+      <a href="#results">Қорытынды</a>
+    </nav>
+
+    <a class="header-cta" href="#demo">
+      DEMO <span aria-hidden="true">↗</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Мәзірді ашу"
+      aria-expanded="false"
+      aria-controls="mobileNav"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </header>
+
+  <nav
+    class="mobile-nav"
+    id="mobileNav"
+    aria-label="Мобильді навигация"
+    hidden
+  >
+    <a href="#problem">Мәселе</a>
+    <a href="#goal">Мақсат</a>
+    <a href="#process">Жүйе</a>
+    <a href="#technology">Технология</a>
+    <a href="#demo">Мысал</a>
+    <a href="#results">Қорытынды</a>
+  </nav>
+
+  <main>
+
+    <!-- ====================================== -->
+    <!-- 01. ТИТУЛЬНАЯ СТРАНИЦА -->
+    <!-- ====================================== -->
+
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+
+      <div class="hero-aura" aria-hidden="true"></div>
+
+      <div
+        class="cursor-light"
+        id="cursorLight"
+        aria-hidden="true"
+      ></div>
+
+      <div class="hero-stars" aria-hidden="true"></div>
+
+      <canvas
+        id="waveCanvas"
+        class="wave-canvas"
+        aria-hidden="true"
+      ></canvas>
+
+      <div class="hero-noise" aria-hidden="true"></div>
+
+      <div class="hero-copy">
+
+        <!-- ЕДИНЫЙ БЛОК ЗАГОЛОВКА И ТЕМЫ -->
+
+        <div class="hero-heading-group">
+
+          <h1
+            id="heroTitle"
+            class="hero-enter"
+            style="--delay:.25s"
+          >
+            AIFARABI
+          </h1>
+
+          <div
+            class="hero-topic hero-enter"
+            style="--delay:.6s"
+          >
+            
+
+            <p class="hero-main-topic">
+              Жасанды интеллект негізінде
+              оқу материалдарынан бейнесабақтарды
+              автоматты генерациялау
+            </p>
+          </div>
+
+        </div>
+
+        <!-- АВТОР И ПРЕПОДАВАТЕЛЬ -->
+
+        <div
+          class="hero-authors hero-enter"
+          style="--delay:.95s"
+        >
+
+          <div class="author-item">
+            <span>ОРЫНДАҒАН</span>
+            <strong>Ғалымжанқызы И.</strong>
+          </div>
+
+          <i aria-hidden="true"></i>
+
+          <div class="author-item">
+            <span>ҚАБЫЛДАҒАН</span>
+            <strong>Шрымбай Д.А.</strong>
+          </div>
+
+        </div>
+
+        <!-- ПЕРЕХОД ВНИЗ -->
+
+        <a
+          class="hero-scroll hero-enter"
+          href="#problem"
+          style="--delay:1.25s"
+        >
+          <span class="scroll-mouse">
+            <span></span>
+          </span>
+
+          <span>ЗЕРТТЕУДІ ҚАРАУ</span>
+          <span aria-hidden="true">↓</span>
+        </a>
+
+      </div>
+
+      <div
+        class="hero-coordinate hero-enter"
+        style="--delay:1.2s"
+      >
+        AIFARABI / RESEARCH / 2026
+      </div>
+
+      <div class="hero-side-label" aria-hidden="true">
+        SCROLL TO EXPLORE — 2026
+      </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 02. ПРОБЛЕМА -->
+    <!-- ====================================== -->
+
+    <section
+      class="content-section section-problem"
+      id="problem"
+      aria-labelledby="problemTitle"
+    >
+
+      <div class="section-inner">
+
+        <div class="section-intro reveal">
+
+          <span class="section-index">
+            01 <span>/</span> МӘСЕЛЕ
+          </span>
+
+          <p class="overline">
+            CHALLENGE / БІЛІМ БЕРУ
+          </p>
+
+          <h2 id="problemTitle">
+            Оқу материалы
+            <em>түсінікті</em>
+            болуы керек.
+          </h2>
+
+          <p class="section-lead">
+            Күрделі ақпаратты қабылдауды жеңілдету
+            және бейнесабақ дайындауға жұмсалатын
+            уақытты азайту — зерттеудің негізгі
+            алғышарттары.
+          </p>
+
+        </div>
+
+        <div class="problem-grid">
+
+          <article class="problem-card reveal">
+
+            <span class="card-number">
+              01 — COMPLEXITY
+            </span>
+
+            <span class="card-symbol">⌘</span>
+
+            <h3>Күрделі дәрістер</h3>
+
+            <p>
+              Ғылыми терминдер мен ұзақ мәтіндер
+              тақырыпты өздігінен меңгеруді
+              қиындатуы мүмкін.
+            </p>
+
+            <span class="card-bottom">
+              МӘТІН → ТҮСІНІК
+            </span>
+
+          </article>
+
+          <article class="problem-card reveal">
+
+            <span class="card-number">
+              02 — PRODUCTION
+            </span>
+
+            <span class="card-symbol">◷</span>
+
+            <h3>Уақыт шығыны</h3>
+
+            <p>
+              Сценарий жазу, анимация жасау,
+              дыбыстау және монтаж бірнеше
+              бөлек жұмысты талап етеді.
+            </p>
+
+            <span class="card-bottom">
+              УАҚЫТ → АВТОМАТТАНДЫРУ
+            </span>
+
+          </article>
+
+          <article class="problem-card reveal">
+
+            <span class="card-number">
+              03 — LANGUAGE
+            </span>
+
+            <span class="card-symbol">Ә</span>
+
+            <h3>Қазақ тілі</h3>
+
+            <p>
+              Терминдерді дәл сақтап, теорияны
+              сауатты әрі қарапайым қазақ тілінде
+              жеткізу маңызды.
+            </p>
+
+            <span class="card-bottom">
+              ТЕРМИН → ТҮСІНДІРУ
+            </span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 03. ЦЕЛЬ И РЕШЕНИЕ -->
+    <!-- ====================================== -->
+
+    <section
+      class="content-section section-goal"
+      id="goal"
+      aria-labelledby="goalTitle"
+    >
+
+      <div class="section-inner goal-layout">
+
+        <div class="goal-left reveal">
+
+          <span class="section-index">
+            02 <span>/</span> ШЕШІМ
+          </span>
+
+          <p class="overline">
+            THE IDEA / AIFARABI
+          </p>
+
+          <h2 id="goalTitle">
+            Құжаттан —
+            <em>оқу сценарийіне.</em>
+          </h2>
+
+          <p class="section-lead">
+            AIFarabi оқу материалының құрылымын
+            талдап, маңызды ұғымдарды бөліп,
+            қазақша түсіндіру сценарийін
+            дайындауға бағытталған.
+          </p>
+
+          <div class="research-note">
+
+            <span class="note-mark">!</span>
+
+            <p>
+              <strong>Зерттеу шекарасы.</strong>
+              Мақалада жүйенің кезеңдік
+              архитектурасы қарастырылған.
+              Толық бейнегенерация мен оның
+              тиімділігі әлі тәжірибелік
+              тұрғыдан дәлелденген жоқ.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div
+          class="transform-stage reveal"
+          aria-label="Өңдеу тізбегі"
+        >
+
+          <div class="stage-orbit orbit-one"></div>
+          <div class="stage-orbit orbit-two"></div>
+
+          <div class="stage-node source-node">
+            <span>01 / INPUT</span>
+            <strong>PDF · DOCX · TXT</strong>
+            <small>Оқу құжаты</small>
+          </div>
+
+          <div class="stage-connector">
+            <span></span>
+            <span class="connector-arrow">↓</span>
+          </div>
+
+          <div class="stage-node core-node">
+            <span>02 / INTELLIGENCE</span>
+            <div class="core-icon">✳</div>
+            <strong>AIFarabi AI</strong>
+            <small>
+              Талдау · Құрылымдау · Түсіндіру
+            </small>
+          </div>
+
+          <div class="stage-connector">
+            <span></span>
+            <span class="connector-arrow">↓</span>
+          </div>
+
+          <div class="stage-node output-node">
+            <span>03 / OUTPUT</span>
+            <strong>Қазақша сценарий</strong>
+            <small>Бейнежасауға негіз</small>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 04. АРХИТЕКТУРА -->
+    <!-- ====================================== -->
+
+    <section
+      class="content-section section-process"
+      id="process"
+      aria-labelledby="processTitle"
+    >
+
+      <div class="section-inner">
+
+        <div class="section-intro reveal">
+
+          <span class="section-index">
+            03 <span>/</span> АРХИТЕКТУРА
+          </span>
+
+          <p class="overline">
+            WORKFLOW / MODULAR SYSTEM
+          </p>
+
+          <h2 id="processTitle">
+            Бес кезең.
+            <em>Бір жүйе.</em>
+          </h2>
+
+          <p class="section-lead">
+            Әр кезеңнің нәтижесі келесі
+            модульге беріледі. Бұл қателерді
+            жеке анықтауға және өңдеудің
+            сапасын бақылауға мүмкіндік береді.
+          </p>
+
+        </div>
+
+        <div class="timeline">
+
+          <article class="timeline-item reveal">
+
+            <div class="timeline-rail">
+              <span>01</span>
+            </div>
+
+            <div class="timeline-body">
+              <div class="timeline-meta">
+                INPUT / БАСТАПҚЫ БАҒЫТ
+              </div>
+
+              <h3>Құжатты қабылдау</h3>
+
+              <p>
+                PDF, DOCX, TXT файлдарын жүктеу
+                және мәтін мазмұнын бөліп алу.
+              </p>
+            </div>
+
+            <span class="status status-initial">
+              Бастапқы бағыт
+            </span>
+
+          </article>
+
+          <article class="timeline-item reveal">
+
+            <div class="timeline-rail">
+              <span>02</span>
+            </div>
+
+            <div class="timeline-body">
+              <div class="timeline-meta">
+                ANALYSIS / БАСТАПҚЫ БАҒЫТ
+              </div>
+
+              <h3>Мәтінді талдау</h3>
+
+              <p>
+                Тақырыптарды, негізгі анықтамалар
+                мен бағдарламалау мысалдарын анықтау.
+              </p>
+            </div>
+
+            <span class="status status-initial">
+              Бастапқы бағыт
+            </span>
+
+          </article>
+
+          <article class="timeline-item reveal">
+
+            <div class="timeline-rail">
+              <span>03</span>
+            </div>
+
+            <div class="timeline-body">
+              <div class="timeline-meta">
+                SCRIPT / БАСТАПҚЫ БАҒЫТ
+              </div>
+
+              <h3>Қазақша сценарий</h3>
+
+              <p>
+                Мазмұнды жүйелеу, күрделі
+                терминдерді түсіндіру,
+                мысалдарды дайындау.
+              </p>
+            </div>
+
+            <span class="status status-initial">
+              Бастапқы бағыт
+            </span>
+
+          </article>
+
+          <article class="timeline-item reveal">
+
+            <div class="timeline-rail">
+              <span>04</span>
+            </div>
+
+            <div class="timeline-body">
+              <div class="timeline-meta">
+                VISUAL + AUDIO / ЖОСПАР
+              </div>
+
+              <h3>Анимация және дыбыс</h3>
+
+              <p>
+                Оқу мазмұнына сай көрнекі
+                сахналар мен қазақша дыбыстауды
+                генерациялау.
+              </p>
+            </div>
+
+            <span class="status status-future">
+              Жоспарда
+            </span>
+
+          </article>
+
+          <article class="timeline-item reveal">
+
+            <div class="timeline-rail">
+              <span>05</span>
+            </div>
+
+            <div class="timeline-body">
+              <div class="timeline-meta">
+                EXPORT / ЖОСПАР
+              </div>
+
+              <h3>Бейнежазбаны біріктіру</h3>
+
+              <p>
+                Кадрлар мен дыбысты синхрондау,
+                сапаны тексеру және MP4 экспорттау.
+              </p>
+            </div>
+
+            <span class="status status-future">
+              Жоспарда
+            </span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 05. ТЕХНОЛОГИИ -->
+    <!-- ====================================== -->
+
+    <section
+      class="content-section section-tech"
+      id="technology"
+      aria-labelledby="technologyTitle"
+    >
+
+      <div class="section-inner">
+
+        <div class="section-intro reveal">
+
+          <span class="section-index">
+            04 <span>/</span> ТЕХНОЛОГИЯЛАР
+          </span>
+
+          <p class="overline">
+            STACK / TECHNICAL FOUNDATION
+          </p>
+
+          <h2 id="technologyTitle">
+            Жүйенің
+            <em>технологиялық негізі.</em>
+          </h2>
+
+          <p class="section-lead">
+            Архитектурада қарастырылған
+            бағдарламалық құралдар мен
+            олардың міндеттері.
+          </p>
+
+        </div>
+
+        <div class="tech-grid">
+
+          <article class="tech-card reveal">
+            <span class="tech-code">PY</span>
+            <div>
+              <h3>Python</h3>
+              <p>Мәтінді өңдеу және жүйе логикасы</p>
+            </div>
+            <span class="tech-arrow">↗</span>
+          </article>
+
+          <article class="tech-card reveal">
+            <span class="tech-code">DJ</span>
+            <div>
+              <h3>Django</h3>
+              <p>Веб-қосымшаның серверлік бөлігі</p>
+            </div>
+            <span class="tech-arrow">↗</span>
+          </article>
+
+          <article class="tech-card reveal">
+            <span class="tech-code">DB</span>
+            <div>
+              <h3>SQLite</h3>
+              <p>Мәліметтерді сақтау</p>
+            </div>
+            <span class="tech-arrow">↗</span>
+          </article>
+
+          <article class="tech-card reveal">
+            <span class="tech-code">PDF</span>
+            <div>
+              <h3>PyMuPDF</h3>
+              <p>PDF құжаттарынан мәтін алу</p>
+            </div>
+            <span class="tech-arrow">↗</span>
+          </article>
+
+          <article class="tech-card reveal">
+            <span class="tech-code">DOC</span>
+            <div>
+              <h3>python-docx</h3>
+              <p>Word материалдарын өңдеу</p>
+            </div>
+            <span class="tech-arrow">↗</span>
+          </article>
+
+          <article class="tech-card reveal">
+            <span class="tech-code">AI</span>
+            <div>
+              <h3>Model API</h3>
+              <p>Тілдік талдау және сценарий құрастыру</p>
+            </div>
+            <span class="tech-arrow">↗</span>
+          </article>
+
+        </div>
+
+        <p class="tech-footnote reveal">
+          * Технологиялар мақаладағы жобалау және
+          бастапқы прототип деңгейіндегі шешімдерді
+          сипаттайды.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 06. ИНТЕРАКТИВНАЯ ДЕМОНСТРАЦИЯ -->
+    <!-- ====================================== -->
+
+    <section
+      class="content-section section-demo"
+      id="demo"
+      aria-labelledby="demoTitle"
+    >
+
+      <div class="section-inner">
+
+        <div class="section-intro reveal">
+
+          <span class="section-index">
+            05 <span>/</span> ИНТЕРАКТИВТІ МЫСАЛ
+          </span>
+
+          <p class="overline">
+            LIVE CONCEPT / PYTHON
+          </p>
+
+          <h2 id="demoTitle">
+            Код
+            <em>қалай орындалады?</em>
+          </h2>
+
+          <p class="section-lead">
+            Python тіліндегі
+            <code>for</code>
+            циклін түсіндірудің тұжырымдамалық
+            үлгісі. «Іске қосу» батырмасын басып,
+            мәндердің өзгерісін бақылаңыз.
+          </p>
+
+        </div>
+
+        <div class="demo-layout reveal">
+
+          <!-- ПРИМЕР КОДА -->
+
+          <div class="terminal-pane">
+
+            <div class="terminal-head">
+
+              <div class="terminal-lights">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <span>example.py</span>
+              <span>PYTHON 3</span>
+
+            </div>
+
+            <pre class="source-code" aria-label="Python мысалы"><code><span class="syntax-purple">for</span> i <span class="syntax-purple">in</span> <span class="syntax-blue">range</span>(<span class="syntax-yellow">1</span>, <span class="syntax-yellow">6</span>):
+    <span class="syntax-blue">print</span>(i)</code></pre>
+
+            <div class="terminal-description">
+
+              <span class="terminal-caption">
+                ТҮСІНДІРУ / EXPLANATION
+              </span>
+
+              <p>
+                <code>i</code> айнымалысы
+                1-ден 5-ке дейін өзгеріп,
+                әр мән жаңа жолға шығарылады.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- ВИЗУАЛИЗАЦИЯ -->
+
+          <div class="execution-pane">
+
+            <div class="execution-head">
+              <span>EXECUTION VISUALIZER</span>
+              <span class="simulation-dot">
+                SIMULATION
+              </span>
+            </div>
+
+            <div class="value-label">
+              АЙНЫМАЛЫ МӘНІ:
+              <code>i</code>
+            </div>
+
+            <div
+              class="big-value"
+              id="currentValue"
+              aria-live="polite"
+            >
+              —
+            </div>
+
+            <div
+              class="five-dots"
+              id="valueDots"
+              aria-label="Циклдің бес қадамы"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="console-label">
+              ТЕРМИНАЛ / OUTPUT
+            </div>
+
+            <pre
+              class="output-console"
+              id="consoleOutput"
+              aria-live="polite"
+            >Бағдарламаны іске қосыңыз.</pre>
+
+            <div class="demo-actions">
+
+              <button
+                class="action-primary"
+                id="runDemo"
+                type="button"
+              >
+                ▶ ІСКЕ ҚОСУ
+              </button>
+
+              <button
+                class="action-secondary"
+                id="resetDemo"
+                type="button"
+              >
+                ↺ ҚАЙТА БАСТАУ
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <p class="demo-footnote reveal">
+          Бұл — дайын бейнесабақтың тәжірибелік
+          нәтижесі емес, болашақ визуализация
+          тәсілін көрсететін интерактивті прототип.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 07. РЕЗУЛЬТАТЫ И ЗАКЛЮЧЕНИЕ -->
+    <!-- ====================================== -->
+
+    <section
+      class="content-section section-results"
+      id="results"
+      aria-labelledby="resultsTitle"
+    >
+
+      <div class="section-inner">
+
+        <div class="section-intro reveal">
+
+          <span class="section-index">
+            06 <span>/</span> ҚОРЫТЫНДЫ
+          </span>
+
+          <p class="overline">
+            RESEARCH OUTCOME / NEXT STEPS
+          </p>
+
+          <h2 id="resultsTitle">
+            Идеядан —
+            <em>болашақ жүйеге.</em>
+          </h2>
+
+          <p class="section-lead">
+            Зерттеу оқу құжаттарын бейнесабаққа
+            түрлендірудің модульдік тәсілін және
+            сапаны тексеру талаптарын негіздейді.
+          </p>
+
+        </div>
+
+        <div class="result-grid">
+
+          <article class="result-card reveal">
+
+            <span>01 / АРХИТЕКТУРА</span>
+
+            <h3>Кезеңдік модель</h3>
+
+            <p>
+              Құжатты өңдеу, сценарий құрастыру
+              және мультимедиа генерациялау
+              міндеттері бөлінді.
+            </p>
+
+          </article>
+
+          <article class="result-card reveal">
+
+            <span>02 / ТІЛДІК САПА</span>
+
+            <h3>Қазақша түсіндіру</h3>
+
+            <p>
+              Ғылыми мағынаны сақтау,
+              терминдердің дәлдігі және
+              түсінікті баяндау талаптары белгіленді.
+            </p>
+
+          </article>
+
+          <article class="result-card reveal">
+
+            <span>03 / КЕЛЕСІ КЕЗЕҢ</span>
+
+            <h3>Тексеру және кеңейту</h3>
+
+            <p>
+              Анимация, қазақша дыбыстау,
+              MP4 экспорт және оқытушы
+              сараптамасы жоспарланған.
+            </p>
+
+          </article>
+
+        </div>
+
+        <!-- ФИНАЛЬНЫЙ ЭКРАН -->
+
+        <div class="thank-you reveal">
+
+          <div class="thank-orb" aria-hidden="true">
+            ✳
+          </div>
+
+          <span class="overline">
+            AIFARABI / 2026
+          </span>
+
+          <h2>
+            Назарларыңызға
+            <em>рақмет!</em>
+          </h2>
+
+          <p>
+            Жасанды интеллект · Қазақ тілі ·
+            Цифрлық білім беру
+          </p>
+
+          <a href="#home" class="back-to-top">
+            БАСЫНА ОРАЛУ
+            <span aria-hidden="true">↑</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ПОДВАЛ -->
+
+  <footer class="site-footer">
+    <span>
+      © 2026 AIFarabi · Ғылыми жоба
+    </span>
+
+    <span>
+      Ғалымжанқызы И. / Шрымбай Д.А.
+    </span>
+  </footer>
+
+
+  <!-- ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ HERO -->
+  <style>
+    .hero {
+      min-height: 100vh;
+      min-height: 100svh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 5;
+    }
+
+    /* Единая композиция заголовка и темы */
+
+    .hero-heading-group {
+      width: min(94%, 1200px);
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-heading-group h1 {
+      font-family: "Space Grotesk", "Manrope", sans-serif;
+      font-size: clamp(65px, 11vw, 155px);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.065em;
+
+      margin: 0 auto 18px;
+      padding: 0;
+
+      color: #F8F9FA;
+
+      text-shadow:
+        0 0 14px rgba(248, 249, 250, 0.4),
+        0 0 36px rgba(104, 162, 235, 0.33),
+        0 0 75px rgba(194, 49, 201, 0.25);
+    }
+
+    .hero-topic {
+      max-width: 940px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-topic .hero-subtitle {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(16px, 1.7vw, 23px);
+      font-weight: 500;
+      line-height: 1.5;
+      margin: 0 0 4px;
+      color: #F8F9FA;
+    }
+
+    .hero-topic .hero-main-topic {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(18px, 2.25vw, 30px);
+      font-weight: 700;
+      line-height: 1.35;
+      margin: 0;
+      color: #F8F9FA;
+      text-wrap: balance;
+
+      text-shadow:
+        0 0 22px rgba(104, 162, 235, 0.2);
+    }
+
+    /* Адаптация */
+
+    @media (max-width: 768px) {
+      .hero-heading-group h1 {
+        font-size: clamp(52px, 12vw, 92px);
+        letter-spacing: -0.06em;
+        margin-bottom: 14px;
+      }
+
+      .hero-topic {
+        max-width: 95%;
+      }
+
+      .hero-topic .hero-subtitle {
+        font-size: 15px;
+      }
+
+      .hero-topic .hero-main-topic {
+        font-size: clamp(17px, 4vw, 22px);
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero-heading-group h1 {
+        font-size: clamp(42px, 12vw, 58px);
+      }
+
+      .hero-topic .hero-main-topic {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+</body>
+
+</html>
